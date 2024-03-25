@@ -1,5 +1,8 @@
 /* GENERAL */
 
+$main-color: #f6f6f6;
+$bouton-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
 body {
     margin: 0px auto;
     font-family: 'roboto', 'sans serif';
@@ -24,7 +27,7 @@ body {
     height: 50px;
     width: 218px;
     border-radius: 25px;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: $bouton-color;
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -89,15 +92,17 @@ $location-background-color: #eaeaea;
 
 .explorer {
     text-align: center;
-        background-color: #f6f6f6;
+        background-color: $main-color;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 4px;
+        padding: 40px 35px 50px 35px;
 
         &_title {
-            margin: 30px 50px 0 50px;
+            margin-left: 30px;
+            margin-right: 30px;
         }
 
         &_subtitle {
@@ -109,8 +114,60 @@ $location-background-color: #eaeaea;
 
         &_bouton {
             @include bouton;
-            margin-bottom: 50px;
+            
         }
 }
 
 /* FONCTION */
+
+.fonction {
+    padding: 40px 20px 40px 20px;
+
+        &_step {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            padding-left: 10px;
+            padding-top: 30px;
+
+            &_card {
+                display: flex;
+                align-items: center;
+                border-radius: 20px;
+                background-color: #f6f6f6;
+                box-shadow: 0px 4px 15px 0px #00000026;
+                height: 72px;
+                width: 100%;
+                position: relative;
+
+                &_number {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 24px;
+                    color: white;
+                    background-color: #9356DC;
+                    height: 24px;
+                    width: 24px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    position: absolute;
+                    left: -10px;
+                }
+
+                &_icon {
+                    color: #7e7e7e;
+                    font-size: 20px;
+                    position: absolute;
+                    left: 40px;
+                }
+
+                &_subtitle {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-left: 80px;
+                }
+            }  
+        }
+}

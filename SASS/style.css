@@ -73,9 +73,11 @@ body h1 {
   justify-content: center;
   align-items: center;
   margin-top: 4px;
+  padding: 40px 35px 50px 35px;
 }
 .explorer_title {
-  margin: 30px 50px 0 50px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .explorer_subtitle {
   font-size: 18px;
@@ -96,7 +98,52 @@ body h1 {
   font-weight: 500;
   font-size: 16px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  margin-bottom: 50px;
 }
 
-/* FONCTION *//*# sourceMappingURL=style.css.map */
+/* FONCTION */
+.fonction {
+  padding: 40px 20px 40px 20px;
+}
+.fonction_step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 10px;
+  padding-top: 30px;
+}
+.fonction_step_card {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  height: 72px;
+  width: 100%;
+  position: relative;
+}
+.fonction_step_card_number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  color: white;
+  background-color: #9356DC;
+  height: 24px;
+  width: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  position: absolute;
+  left: -10px;
+}
+.fonction_step_card_icon {
+  color: #7e7e7e;
+  font-size: 20px;
+  position: absolute;
+  left: 40px;
+}
+.fonction_step_card_subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 80px;
+}/*# sourceMappingURL=style.css.map */
