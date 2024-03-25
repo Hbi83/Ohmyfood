@@ -1,0 +1,31 @@
+/* GENERAL */
+
+body {
+    margin: 0px auto;
+    font-family: 'roboto', 'sans serif';
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+    }
+}
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px 0px #00000026;
+
+
+        &_logo {
+            width: 197px;
+            height: 36px;
+            margin: auto;
+            padding: 15px 0px 15px 0px;
+        }
+}
+    
