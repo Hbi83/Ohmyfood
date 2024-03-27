@@ -18,6 +18,12 @@ body {
             font-size: 24px;
             margin: 0;
         }
+
+        h2 {
+            font-weight: 700;
+            font-size: 18px;
+            margin: 0;
+        }
 }
 
 @mixin bouton {
@@ -92,13 +98,13 @@ $location-background-color: #eaeaea;
 
 .explorer {
     text-align: center;
-        background-color: $main-color;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4px;
-        padding: 40px 35px 50px 35px;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+    padding: 40px 35px 50px 35px;
 
         &_title {
             margin-left: 30px;
@@ -121,11 +127,11 @@ $location-background-color: #eaeaea;
 /* FONCTION */
 
 .fonction {
-    padding: 40px 20px 40px 20px;
+    padding: 50px 20px 50px 20px;
 
         &_step {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
             padding-left: 10px;
@@ -163,11 +169,73 @@ $location-background-color: #eaeaea;
                     left: 40px;
                 }
 
+                &_icon-purple {
+                    color: #9356DC;
+                }
+
                 &_subtitle {
                     font-size: 16px;
                     font-weight: 500;
                     margin-left: 80px;
                 }
             }  
+        }
+}
+
+/* RESTAURANT */
+
+.restaurant {
+    padding: 40px 20px 40px 20px;
+    background-color: $main-color;
+
+        &_title {
+            margin-bottom: 27px;
+        }
+
+        &_step {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            &_card {
+                background-color: white;
+                border-radius: 15px;
+                width: 100%;
+
+                &_fig {
+                    margin: 0;
+                    position: relative;
+
+                    &_img {
+                        height: 200px;
+                        width: 100%;
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                    }
+
+                    &_new {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 2px;
+                        color: #008766;
+                        background-color: #99e2d0;
+                        height: 29px;
+                        width: 80px;
+                        position: absolute;
+                        top: 5%;
+                        right: 3%;
+                    }
+
+                    &_cardcontent {
+                        padding: 11px 20px 15px 13px;
+
+                        &_subtitle {
+                            margin-top: 5px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
         }
 }
