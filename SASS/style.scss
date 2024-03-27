@@ -2,6 +2,7 @@
 
 $main-color: #f6f6f6;
 $bouton-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+$secondary-color: #353535;
 
 body {
     margin: 0px auto;
@@ -114,7 +115,7 @@ $location-background-color: #eaeaea;
         &_subtitle {
             font-size: 18px;
             font-weight: 300;
-            color: #353535;
+            color: $secondary-color;
             margin-bottom: 30px
         }
 
@@ -131,7 +132,7 @@ $location-background-color: #eaeaea;
 
         &_step {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
             gap: 20px;
             padding-left: 10px;
@@ -185,7 +186,7 @@ $location-background-color: #eaeaea;
 /* RESTAURANT */
 
 .restaurant {
-    padding: 40px 20px 40px 20px;
+    padding: 40px 20px 60px 20px;
     background-color: $main-color;
 
         &_title {
@@ -194,13 +195,14 @@ $location-background-color: #eaeaea;
 
         &_step {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 20px;
 
             &_card {
                 background-color: white;
                 border-radius: 15px;
                 width: 100%;
+                box-shadow: 0px 4px 15px 0px #0000001A;
 
                 &_fig {
                     margin: 0;
@@ -233,8 +235,47 @@ $location-background-color: #eaeaea;
                         &_subtitle {
                             margin-top: 5px;
                             margin-bottom: 0;
+                            font-weight: 300;
+                            font-size: 17px;
                         }
                     }
+                }
+            }
+        }
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 22px 25px 15px 25px;
+    background-color: $secondary-color;
+
+        &_logo {
+            filter: invert(100%);
+            width: 139px;
+            height: 27px;
+        }
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            list-style: none;
+            padding-inline-start: 0;
+            
+            &_link {
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+
+                &_icon {
+                    margin-right: 10px;
+                }
+
+                &_icon-rotate {
+                    transform: rotate(135deg);
+                    font-size: 11px;
+                    margin-right: 10px;
                 }
             }
         }
