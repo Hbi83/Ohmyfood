@@ -19,6 +19,48 @@ body h2 {
   margin: 0;
 }
 
+/* LOADER */
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 1s 2s forwards;
+}
+.loader_dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 15px;
+  animation: loader infinite 0.3s alternate;
+}
+.loader_dot-d1 {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+.loader_dot-d2 {
+  animation-delay: 0.05s;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+.loader_dot-d3 {
+  animation-delay: 0.1s;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
 /* HEADER */
 .header {
   display: flex;
@@ -103,6 +145,11 @@ body h2 {
   font-weight: 500;
   font-size: 16px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  transition: all 500ms;
+}
+.explorer_bouton:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
 /* FONCTION */
@@ -208,7 +255,6 @@ body h2 {
   font-size: 17px;
 }
 .restaurant_step_card_icons {
-  font-size: 25px;
   position: absolute;
   bottom: 10%;
   right: 8%;
@@ -218,18 +264,27 @@ body h2 {
 }
 .restaurant_step_card_icons input:checked ~ .liked {
   display: inline;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  opacity: 1;
 }
 .restaurant_step_card_icons input:checked ~ .not-liked {
   display: none;
 }
 .restaurant_step_card_icons_liked {
-  display: none;
+  position: relative;
+  font-size: 26px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.restaurant_step_card_icons_liked:hover {
+  opacity: 1;
+}
+.restaurant_step_card_icons_notliked {
+  position: absolute;
+  font-size: 25px;
 }
 
 /* FOOTER */
