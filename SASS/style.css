@@ -1,4 +1,11 @@
 /* GENERAL */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  /* FONCTION */
+  .fonction_step {
+    display: flex;
+    flex-direction: row;
+  }
+}
 body {
   margin: 0px auto;
   font-family: "roboto", "sans serif";
