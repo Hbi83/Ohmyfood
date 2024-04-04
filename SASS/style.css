@@ -1,11 +1,4 @@
 /* GENERAL */
-@media (min-width: 1024px) and (max-width: 1440px) {
-  /* FONCTION */
-  .fonction_step {
-    display: flex;
-    flex-direction: row;
-  }
-}
 body {
   margin: 0px auto;
   font-family: "roboto", "sans serif";
@@ -163,13 +156,24 @@ body h2 {
 .fonction {
   padding: 50px 20px 50px 20px;
 }
+@media (min-width: 1100px) {
+  .fonction {
+    max-width: 1260px;
+    margin: auto;
+  }
+}
 .fonction_step {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
   padding-left: 10px;
   padding-top: 30px;
+}
+@media (min-width: 1100px) {
+  .fonction_step {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding-left: 0;
+  }
 }
 .fonction_step_card {
   display: flex;
@@ -178,8 +182,13 @@ body h2 {
   background-color: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   height: 72px;
-  width: 100%;
   position: relative;
+  margin-bottom: 20px;
+}
+@media (min-width: 1100px) {
+  .fonction_step_card {
+    width: 30%;
+  }
 }
 .fonction_step_card_number {
   display: flex;
@@ -218,10 +227,23 @@ body h2 {
 .restaurant_title {
   margin-bottom: 27px;
 }
+@media (min-width: 1100px) {
+  .restaurant_title {
+    max-width: 1260px;
+    margin: auto;
+  }
+}
 .restaurant_step {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
+}
+@media (min-width: 1100px) {
+  .restaurant_step {
+    max-width: 1260px;
+    margin: auto;
+    justify-content: space-between;
+  }
 }
 .restaurant_step_card {
   background-color: white;
@@ -229,6 +251,12 @@ body h2 {
   width: 100%;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   position: relative;
+}
+@media (min-width: 1100px) {
+  .restaurant_step_card {
+    width: 46%;
+    margin-top: 30px;
+  }
 }
 .restaurant_step_card_fig {
   margin: 0;
@@ -238,6 +266,11 @@ body h2 {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+@media (min-width: 1100px) {
+  .restaurant_step_card_fig_img {
+    height: 280px;
+  }
 }
 .restaurant_step_card_fig_new {
   display: flex;

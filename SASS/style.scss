@@ -1,7 +1,5 @@
 /* GENERAL */
 
-@import 'desktop.scss';
-
 $main-color: #f6f6f6;
 $bouton-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $secondary-color: #353535;
@@ -29,6 +27,7 @@ body {
             margin: 0;
         }
 }
+
 
 @mixin bouton {
     display: flex;
@@ -186,13 +185,22 @@ $location-background-color: #eaeaea;
 .fonction {
     padding: 50px 20px 50px 20px;
 
+    @media (min-width: 1100px) {
+        max-width: 1260px;
+        margin: auto;
+    }
+
         &_step {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 20px;
             padding-left: 10px;
             padding-top: 30px;
+
+            @media (min-width: 1100px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;       
+                gap: 30px;
+                padding-left: 0;
+            }
 
             &_card {
                 display: flex;
@@ -201,8 +209,12 @@ $location-background-color: #eaeaea;
                 background-color: #f6f6f6;
                 box-shadow: 0px 4px 15px 0px #00000026;
                 height: 72px;
-                width: 100%;
                 position: relative;
+                margin-bottom: 20px;
+
+                @media (min-width: 1100px) {
+                    width: 30%;
+                }
 
                 &_number {
                     display: flex;
@@ -247,12 +259,23 @@ $location-background-color: #eaeaea;
 
         &_title {
             margin-bottom: 27px;
+
+            @media (min-width: 1100px) {
+                max-width: 1260px;
+                margin: auto;
+            }
         }
 
         &_step {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             gap: 20px;
+
+            @media (min-width: 1100px) {
+                max-width: 1260px;
+                margin: auto;
+                justify-content: space-between;
+            }
 
             &_card {
                 background-color: white;
@@ -260,6 +283,11 @@ $location-background-color: #eaeaea;
                 width: 100%;
                 box-shadow: 0px 4px 15px 0px #0000001A;
                 position: relative;
+
+                @media (min-width: 1100px) {
+                    width: 46%;
+                    margin-top: 30px;
+                }
 
                 &_fig {
                     margin: 0;
@@ -269,6 +297,10 @@ $location-background-color: #eaeaea;
                         width: 100%;
                         border-top-left-radius: 15px;
                         border-top-right-radius: 15px;
+                        
+                        @media (min-width: 1100px) {
+                            height: 280px;
+                        }
                     }
 
                     &_new {
