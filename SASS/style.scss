@@ -161,6 +161,10 @@ $location-background-color: #eaeaea;
         &_title {
             margin-left: 30px;
             margin-right: 30px;
+
+            @media (min-width: 1100px) {
+                font-size: 47px;
+            }
         }
 
         &_subtitle {
@@ -186,7 +190,7 @@ $location-background-color: #eaeaea;
     padding: 50px 20px 50px 20px;
 
     @media (min-width: 1100px) {
-        max-width: 1260px;
+        max-width: 1140px;
         margin: auto;
     }
 
@@ -261,7 +265,7 @@ $location-background-color: #eaeaea;
             margin-bottom: 27px;
 
             @media (min-width: 1100px) {
-                max-width: 1260px;
+                max-width: 1140px;
                 margin: auto;
             }
         }
@@ -272,7 +276,7 @@ $location-background-color: #eaeaea;
             gap: 20px;
 
             @media (min-width: 1100px) {
-                max-width: 1260px;
+                max-width: 1140px;
                 margin: auto;
                 justify-content: space-between;
             }
@@ -297,10 +301,7 @@ $location-background-color: #eaeaea;
                         width: 100%;
                         border-top-left-radius: 15px;
                         border-top-right-radius: 15px;
-                        
-                        @media (min-width: 1100px) {
-                            height: 280px;
-                        }
+                        object-fit: cover;                      
                     }
 
                     &_new {
@@ -377,10 +378,31 @@ $location-background-color: #eaeaea;
     padding: 22px 25px 15px 25px;
     background-color: $secondary-color;
 
+    @media (min-width: 1100px) {
+        padding-bottom: 40px;
+        height: 114px;
+    }
+
+    &_content {
+
+    @media (min-width: 1100px) {
+        max-width: 1440px;
+        margin: auto;
+        display: flex;
+        justify-content: end;
+        flex-direction: row-reverse;
+        align-items: end;
+        height: 100%;
+    }
+
         &_logo {
             filter: invert(100%);
             width: 139px;
             height: 27px;
+
+            @media (min-width: 1100px) {
+                margin-left: 80px;
+            }
         }
 
         &_list {
@@ -389,6 +411,13 @@ $location-background-color: #eaeaea;
             gap: 7px;
             list-style: none;
             padding-inline-start: 0;
+
+            @media (min-width: 1100px) {
+                flex-direction: row;
+                align-items: end;
+                margin: 0;
+                gap: 20px;
+            }
             
             &_link {
                 color: white;
@@ -406,4 +435,5 @@ $location-background-color: #eaeaea;
                 }
             }
         }
+    }
 }
