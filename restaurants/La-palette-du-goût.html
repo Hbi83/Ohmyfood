@@ -8,14 +8,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../SASS/style.css">
 </head>
 
 <body>
     <!-- HEADER -->
     <header class="header">
-        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <i class="header_logo" src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood"></i>
+        <a href="../index.html" class="header_link"><i class="fa-solid fa-arrow-left header_link_icon"></i></a>
+        <img class="header_logo" src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood"/>
     </header>
+
+    <main>
+    <!-- BANNER -->
+        <div class="banner">
+            <img class="banner_img" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="img la pallete du goût"/>
+        </div>
+
+    <!-- MENU -->
+        <section class="menu">
+            <header class="menu_header">
+                <h1 class="menu_header_title">La palette du goût</h1>
+                <label class="menu_header_icons">
+                    <input type="checkbox"/>
+                    <i class="fa-regular fa-heart menu_header_icons_notliked notliked"></i>
+                    <i class="fa-solid fa-heart menu_header_icons_liked liked"></i>
+                </label>
+            </header>
+
+            <div class="menu_cards">
+                <h3 class="menu_cards_title">ENTRÉES</h3>
+                <span class="menu_cards_underline"></span>
+
+                <article class="menu_card">
+                    <div class="menu_card_content">
+                        <h4 class="menu_card_content_title">Fricassée d'escargot</h4>
+                        <p class="menu_card_content_subtitle">Au piment d'espelette</p>
+                    </div>
+                    <div class="menu_card_price">25€</div>
+                    <div class="menu_card_check"><i class="fa-solid fa-circle-check menu_card_check_icon"></i></div>
+                </article>
+
+                <article class="menu_card">
+                    <div class="menu_card_content">
+                        <h4 class="menu_card_content_title">Foie gras de cannard mi-cuit</h4>
+                        <p class="menu_card_content_subtitle">Et ses copeaux de truffes noire</p>
+                    </div>
+                    <div class="menu_card_price">35€</div>
+                    <div class="menu_card_check"><i class="fa-solid fa-circle-check menu_card_check_icon"></i></div>
+                </article>
+
+                <article class="menu_card">
+                    <div class="menu_card_content">
+                        <h4 class="menu_card_content_title">Oeuf au plat</h4>
+                        <p class="menu_card_content_subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                    </div>
+                    <div class="menu_card_price">20€</div>
+                    <div class="menu_card_check"><i class="fa-solid fa-circle-check menu_card_check_icon"></i></div>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

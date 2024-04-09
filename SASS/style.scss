@@ -4,6 +4,7 @@ $main-color: #f6f6f6;
 $bouton-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $secondary-color: #353535;
 $purple-color: #9356DC;
+$green-color: #99e2d0;
 
 body {
     margin: 0px auto;
@@ -26,6 +27,10 @@ body {
             font-size: 18px;
             margin: 0;
         }
+
+        h4 {
+            margin: 0;
+        }
 }
 
 
@@ -44,6 +49,43 @@ body {
     box-shadow: 0px 4px 10px 0px #00000040;
     transition: all 500ms;
 }
+
+@mixin heart {
+    
+        & input {
+        display: none;
+
+            &:checked~ .liked {
+            display: inline;
+            opacity: 1;
+            }
+
+            &:checked~ .not-liked {
+            display: none;
+            }
+        }
+
+            &_liked {
+            position: relative;
+            font-size: 26px;
+            background: $bouton-color;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+                &_notliked {
+                    position: absolute;
+                    font-size: 26px;
+                }
+}
+
 /* LOADER */
 
 .loader {
@@ -331,42 +373,10 @@ $location-background-color: #eaeaea;
                 }
 
                 &_icons {
+                    @include heart;
                     position: absolute;
                     bottom: 10%;
                     right: 8%;
-
-                    & input {
-                        display: none;
-
-                        &:checked~ .liked {
-                            display: inline;
-                            opacity: 1;
-                        }
-
-                        &:checked~ .not-liked {
-                            display: none;
-                        }
-                    }
-
-                    &_liked {
-                        position: relative;
-                        font-size: 26px;
-                        background: $bouton-color;
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        opacity: 0;
-                        transition: opacity 500ms ease-in-out;
-
-                            &:hover {
-                                opacity: 1;
-                            }
-                    }
-
-                    &_notliked {
-                        position: absolute;
-                        font-size: 25px;
-                    }
                 }
             }
         }
@@ -434,6 +444,146 @@ $location-background-color: #eaeaea;
                     margin-right: 10px;
                 }
             }
+        }
+    }
+}
+
+/* PAGES RESTAURANT */
+
+
+/* HEADER*/
+
+.header_link {
+    position: absolute;
+    left: 5%;
+    font-size: 20px;
+}
+
+/* BANNER */
+
+.banner_img {
+    object-fit: cover;
+    width: 100%;
+    height: 275px;
+}
+
+/* MENU */
+
+.menu {
+    background-color: $main-color;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: fixed;
+    margin-top: -25px;
+    width: 100%;
+
+    &_header {
+        padding-top: 30px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+
+        &_title {
+            font-family: shrikhand;
+            font-size: 28px;
+            font-weight: 400;
+        }
+
+        &_icons {
+            @include heart;
+            margin-left: 35px;
+        }
+    }
+
+    &_cards {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &_title {
+            font-weight: 300;
+            font-size: 16px;
+            margin-bottom: 5px;
+            margin-top: 30px;           
+        }
+
+        &_underline {
+            display: block;
+            width: 43px;
+            height: 3px;
+            background-color: $green-color;
+        }
+    }
+
+    &_card {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+        margin: 15px 0px;
+        height: 70px;
+        overflow: hidden;
+        animation: itemAppear 500ms ease-in-out;
+        animation-fill-mode: forwards;
+
+        &_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 15px;
+            line-height: 25px;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &_title {
+                font-weight: 500;
+                font-size: 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &_subtitle {
+                margin: 0;
+                font-weight: 300;
+                font-size: 15px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        
+        &:hover .menu_card_check {
+            right: 0;
+        }
+        
+        &:hover .menu_card_price {
+            margin-right: 20%;
+        }
+
+        &_check {
+            position: absolute;
+            width: 20%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $green-color;
+            right: -13rem;
+            transition-duration: 1200ms;
+
+            &_icon {
+                color: white;
+                font-size: 25px;
+            }
+        }
+
+        &_price {
+            display: flex;
+            align-items: end;
+            font-weight: 700;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            transition-duration: 1200ms;
         }
     }
 }
