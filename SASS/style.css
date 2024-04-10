@@ -300,6 +300,7 @@ body h4 {
   font-size: 17px;
 }
 .restaurant_step_card_icons {
+  cursor: pointer;
   position: absolute;
   bottom: 10%;
   right: 8%;
@@ -445,6 +446,7 @@ body h4 {
   padding-left: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .menu_header_title {
   font-family: shrikhand;
@@ -452,7 +454,8 @@ body h4 {
   font-weight: 400;
 }
 .menu_header_icons {
-  margin-left: 35px;
+  cursor: pointer;
+  margin-right: 40px;
 }
 .menu_header_icons input {
   display: none;
@@ -509,6 +512,7 @@ body h4 {
   overflow: hidden;
   animation: itemAppear 500ms ease-in-out;
   animation-fill-mode: forwards;
+  cursor: pointer;
 }
 .menu_card_content {
   display: flex;
