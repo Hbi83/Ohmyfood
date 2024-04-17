@@ -103,7 +103,7 @@ body h4 {
   border: none;
   background-color: #eaeaea;
   height: 40px;
-  width: 120px;
+  width: 130px;
 }
 .location_search_imput::-moz-placeholder {
   font-size: 16px;
@@ -609,7 +609,7 @@ body h4 {
   justify-content: center;
   align-items: center;
   background-color: #99e2d0;
-  right: -13rem;
+  right: -5rem;
   transition-duration: 1200ms;
 }
 .menu_card_check_icon {

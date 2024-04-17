@@ -174,7 +174,7 @@ $location-background-color: #eaeaea;
             border: none;
             background-color: $location-background-color;
             height: 40px;
-            width: 120px;
+            width: 130px;
 
             &::placeholder {
                 font-size: 16px;
@@ -650,7 +650,7 @@ $location-background-color: #eaeaea;
             justify-content: center;
             align-items: center;
             background-color: $green-color;
-            right: -13rem;
+            right: -5rem;
             transition-duration: 1200ms;
 
             &_icon {
